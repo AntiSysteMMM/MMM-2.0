@@ -1,47 +1,174 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Публицистика Сергея Мавроди 2008-2018 годы</title>
-<style>
-img{max-width:100%;height:auto;display:block;margin:0 auto}
-iframe{display:block;max-width:100%}
-:root{--bg:#fff;--text:#1a1a1a;--muted:#6b7280;--accent:#1a1a1a;--link:#2563eb;--border:#e5e7eb;--code-bg:#f3f4f6}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;font-size:16px;font-weight:400}
-.wrap{max-width:720px;margin:0 auto;padding:40px 20px 80px}
-article{display:block}
-h1{font-size:32px;line-height:1.25;margin-bottom:24px;letter-spacing:-.02em;font-weight:700}
-article p{margin-bottom:16px;font-size:17px}
-article h2{font-size:22px;margin:32px 0 12px;letter-spacing:-.01em;font-weight:700}
-article h3{font-size:19px;margin:24px 0 12px;letter-spacing:-.01em;font-weight:700}
-article a{color:var(--link);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
-article a:hover{border-bottom-color:var(--link)}
-article ul,article ol{margin:0 0 16px 24px}
-article li{margin-bottom:8px;font-size:16px}
-article blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 16px;margin:20px 0;color:#374151;font-style:italic}
-figure{margin:20px 0}
-figure>div{max-width:100%}
-hr{border:none;border-top:1px solid var(--border);margin:28px 0}
-.youtube-embed,.video-embed{position:relative;padding-bottom:56.25%;height:0;margin:20px 0;overflow:hidden}
-.youtube-embed iframe,.video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
-.spacer{display:none}
-.section{margin:16px 0;padding:12px 16px;border-radius:8px;text-align:center}
-@media(max-width:1024px){.wrap{padding:32px 24px 64px}h1{font-size:28px}article p{font-size:16px}}
-@media(max-width:768px){.wrap{padding:24px 16px 48px}h1{font-size:24px;line-height:1.3}h2{font-size:20px}article p{font-size:18px;font-weight:500;line-height:1.6}h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.3}}
-@media(max-width:480px){.wrap{padding:16px 12px 40px}h1{font-size:22px}h2{font-size:18px}article p{font-size:18px}.youtube-embed,.video-embed{margin:16px 0}}
-@media(min-width:1200px){.wrap{max-width:800px;padding:48px 40px 96px}h1{font-size:36px}article p{font-size:18px}}
-@media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}
-@media(prefers-color-scheme:dark){:root{--bg:#1a1a1a;--text:#f5f5f5;--muted:#9ca3af;--accent:#f5f5f5;--border:#374151;--code-bg:#2d2d2d}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Публицистика Сергея Мавроди 2008-2018 годы</title>
+  <style>
+:root {
+  --bg: #f9f7f2;
+  --text: #1f1f1f;
+  --text-muted: #4a4640;
+  --accent: #2a4a6f;
+  --border: #d9d4c8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1816;
+    --text: #e8e4d9;
+    --text-muted: #a39a8c;
+    --accent: #8aa4c2;
+    --border: #3a3630;
+  }
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.82;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+article {
+  max-width: 68ch;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.4em;
+}
+
+h2, h3, h4 {
+  font-weight: 700;
+  margin: 1.8em 0 0.6em;
+}
+
+p {
+  margin: 0 0 1.15em;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+a:hover {
+  border-bottom-color: var(--accent);
+}
+
+figure {
+  margin: 1.2em 0;
+  text-align: center;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+}
+figcaption {
+  margin-top: 0.6em;
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 0.4em 0 !important;
+  background: #000;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* === Правила для компактных видео ===
+   Базовый маленький отступ + сильное правило для соседних элементов.
+   Отдельная нейтрализация .wrap (основная причина больших пустот в старых версиях).
+*/
+.video-container {
+  margin: 0.4em 0 !important;
+}
+
+* + .video-container {
+  margin-top: 0.3em !important;
+}
+
+.wrap > .video-container,
+.wrap > img,
+.wrap figure > img {
+  margin: 0.4em 0 !important;
+}
+
+/* Немного подрезаем маржины у типичных соседей видео (заголовки, фигуры) */
+h1, h2, h3, h4, h5, h6,
+p, figure {
+  margin-bottom: 0.5em;
+}
+
+.callout {
+  margin: 1.8em 0;
+  padding: 1.1em 1.3em;
+  border-radius: 6px;
+  border-left: 5px solid var(--accent);
+  background: #f0e9dc;
+}
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* Заголовки внутри callout не должны сильно раздувать рамку */
+.callout h1,
+.callout h2,
+.callout h3,
+.callout h4,
+.callout h5 {
+  margin: 0.2em 0 0.35em;
+  line-height: 1.25;
+  font-size: 1.1em;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin: 2.4em 0;
+}
+
+@media (max-width: 600px) {
+  .wrap { padding: 40px 18px 80px; }
+  body { font-size: 17px; }
+}
+  </style>
 </head>
 <body>
-<div class="wrap">
-<article>
-<h1>Публицистика Сергея Мавроди 2008-2018 годы</h1>
-<div class="section" style="background-color: hsl(236, 74%, var(--autocolor-background-lightness, 95%));"><p>Регистрация в телеграм-боте: <strong><a href="https://t.me/mavrodi_robot?start=teletype">@Mavrodi_robot</a></strong></p></div><div class="section" style="background-color: hsl(55,  86%, var(--autocolor-background-lightness, 95%));"><p><a href="index.html" class=""><strong>НА ГЛАВНУЮ</strong></a></p></div><figure class="m_column" itemscope="" itemtype="http://schema.org/ImageObject"><img src="41227952-4a3e-4ba0-809a-3ebfaf43ec51.jpeg" class=""></div><figcaption itemprop="description">Живая структурированная сеть, основанная на доверии и взаимопомощи; абсолютно децентрализованная автоматизированная система, в которой телеграм-бот стыкует участников напрямую друг с другом; отсутствие единых баз данных, серверов и центров управления. Тотальная распылённость!</figcaption></figure><hr><p>👉🏼Прелюбопытнейшее <a href="Intervyu-Sergeya-Mavrodi-dlya-RIA-novosti.html" class=""><strong>интервью Сергея Мавроди для "РИА новости"</strong></a></p><p>👉🏼<a href="Matematicheskie-raschyoty-finansovoj-piramidy.html" class=""><strong>Математические расчёты</strong></a> финансовой пирамиды (Сергей Мавроди)</p><p>👉🏼<a href="Varianty-vtorogo-etapa.html" class=""><strong>Статья Сергея Мавроди от 13 октября 2008 года.</strong></a> Про второй этап. Всё это можно проделывать не только с биржами. А, скажем, с биткойном. Или ещё с чем-нибудь, по ситуации</p><p>👉🏼 <a href="Intervyu-Sergeya-Mavrodi-Svetlane-Lukyanchikovoj.html" class=""><strong>Интервью Сергея Мавроди</strong></a> Светлане Лукьянчиковой</p><p>👉🏼<a href="Istoriya-MMM.html" class=""><strong>Речь Сергея Мавроди</strong></a> с трибуны Думы</p><p>👉🏼Сергей Мавроди писал <a href="Sergej-Mavrodi-pro-birzhi.html" class=""><strong>про биржи</strong></a> в 2008 году. Очень любопытные мысли</p><p>👉🏼<a href="Pervoe-pismo-pravitelstvu-ot-Sergeya-Mavrodi.html" class=""><strong>Первое письмо правительству от Сергея Мавроди</strong>.</a> 16 сентября 2008 года</p><p>👉🏼<a href="Vtoroe-pismo-pravitelstvu-ot-Sergeya-Mavrodi.html" class=""><strong>Второе письмо правительству от Сергея Мавроди.</strong></a> 30 сентября 2008 года</p><p>👉🏼<a href="Trete-pismo-pravitelstvu-ot-Sergeya-Mavrodi.html" class=""><strong>Третье письмо правительству от Сергея Мавроди.</strong></a> 6 октября 2008 года</p><p>👉🏼<a href="Predskazanie-Sergeya-Mavrodi-16.10.2008" class=""><strong>"Предсказание"</strong> </a>Сергея Мавроди. 16 октября 2008 года</p><p>👉🏼<a href="Predskazanie-2-Sergej-Mavrodi-24.12.2008" class=""><strong>"Предсказание-2"</strong> </a>Сергея Мавроди. 24 декабря 2008 года</p><p>👉🏼<a href="Preduprezhdenie-Sergeya-Mavrodi-22.01.2009" class=""><strong>Предупреждение </strong></a>Сергей Мавроди, 22 января 2009 года</p><p>👉🏼<a href="Eshchyo-raz-o-dollare-Sergej-Mavrodi-18.02.2009" class=""><strong>Ещё раз о долларе.</strong></a> Сергей Мавроди, 18 февраля 2009 года</p><p>👉🏼<a href="Obrashchenie-Sergeya-Mavrodi-k-vlastyam-Rossii.html" class=""><strong>Обращение Сергея Мавроди к властям России,</strong></a> 23 февраля 2009</p><p>👉🏼<strong><a href="Dopolnenie-k-obrashcheniyu-k-vlastyam.html" class="">Дополнение к обращению к властям Сергея Мавроди,</a></strong><a href="Dopolnenie-k-obrashcheniyu-k-vlastyam-Sergeya-Mavrodi-26-fevralya-2009-10-21.html" class=""> </a>26 февраля 2009</p><p>👉🏼<a href="Stabilizec-Sergej-Mavrodi-17.03.2009" class=""><strong>Стабилизец</strong>.</a> Сергей Мавроди, 17 марта 2009 года</p><p><a href="Krizis-chast-1.html" class=""><strong>👉🏼 Кризис.</strong></a> Сергей Мавроди, 18 мая 2009 года</p><p>👉🏼<a href="Krizis-prodolzhenie-Sergej-Mavrodi-24.06.2009" class=""><strong>Кризис, продолжение.</strong></a> Сергей Мавроди, 24 июня 2009 года</p><p>👉🏼<a href="I-snova-pro-Krizis-Sergej-Mavrodi-27.06.2009" class=""><strong>И снова про кризис.</strong></a> Сергей Мавроди, 27 июня 2009 года</p><p>👉🏼<a href="Pro-stavku-refinansirovaniya-i-krepkij-rubl.html" class=""><strong>Про ставку рефинансирования и крепкий рубль.</strong></a> Сергей Мавроди, 21 декабря 2010 года</p><p>👉🏼<a href="Mavrodi-pro-nalogi-v-MMM-2011.html" class=""><strong>Мавроди про налоги в МММ-2011</strong></a></p><p>👉🏼<a href="TAK-CHTO-ZHE-VSYO-TAKI-DELAT.html" class=""><strong>Так что же всё-таки делать?</strong></a> Если бы Мавроди был на месте властей</p><p>👉🏼<a href="BOG-I-LYUCIFER--kommentarii-k-Biblii-S-Mavrodi.html" class=""><strong>Бог и Люцифер</strong></a> (комментарии к Библии Сергея Мавроди)</p><p>👉🏼<a href="42.html" class=""><strong>"42".</strong></a> Любопытная статейка Сергея Мавроди</p><p>👉🏼<strong><a href="https://esquire.ru/rules/2481-sergey-mavrodi/">Правила жизни Сергея Мавроди</a>,</strong> журнал Esquire</p><div class="section" style="background-color: hsl(236, 74%, var(--autocolor-background-lightness, 95%));"><p>Регистрация в телеграм-боте: <strong><a href="https://t.me/mavrodi_robot?start=teletype">@Mavrodi_robot</a></strong></p></div><div class="section" style="background-color: hsl(55,  86%, var(--autocolor-background-lightness, 95%));"><p><a href="index.html" class=""><strong>НА ГЛАВНУЮ</strong></a></p></div>
-</article>
-</div>
+  <div class="wrap">
+    <article>
+      <h1>Публицистика Сергея Мавроди 2008-2018 годы</h1>
+      <article class="article__content text" itemprop="articleBody"><div class="callout" style="border-left-color:#4a6fa5; background:#e8eef7;"><!-- --><p>Регистрация в телеграм-боте: <strong><a href="https://t.me/mavrodi_robot?start=teletype">@Mavrodi_robot</a></strong></p></div><div class="callout" style="border-left-color:#b38b4d; background:#f5f0e6;"><!-- --><p><a class="" href="Main.html"><strong>НА ГЛАВНУЮ</strong></a></p></div><figure class="m_column" itemscope="" itemtype="http://schema.org/ImageObject"><a name="1B3p"></a><!-- --><img class="" id="1B3p" src="41227952-4a3e-4ba0-809a-3ebfaf43ec51.jpeg"/><!-- --><figcaption itemprop="description"><!-- -->Живая структурированная сеть, основанная на доверии и взаимопомощи; абсолютно децентрализованная автоматизированная система, в которой телеграм-бот стыкует участников напрямую друг с другом; отсутствие единых баз данных, серверов и центров управления. Тотальная распылённость!</figcaption></figure><hr/><p><a name="PPVR"></a>👉🏼Прелюбопытнейшее <a class="" href="Intervyu-Sergeya-Mavrodi-dlya-RIA-novosti.html"><strong>интервью Сергея Мавроди для "РИА новости"</strong></a></p><p><a name="rUUP"></a>👉🏼<a class="" href="Matematicheskie-raschyoty-finansovoj-piramidy.html"><strong>Математические расчёты</strong></a> финансовой пирамиды (Сергей Мавроди)</p><p><a name="Nu2j"></a>👉🏼<a class="" href="Varianty-vtorogo-etapa.html"><strong>Статья Сергея Мавроди от 13 октября 2008 года.</strong></a> Про второй этап. Всё это можно проделывать не только с биржами. А, скажем, с биткойном. Или ещё с чем-нибудь, по ситуации</p><p><a name="pToA"></a>👉🏼 <a class="" href="Intervyu-Sergeya-Mavrodi-Svetlane-Lukyanchikovoj.html"><strong>Интервью Сергея Мавроди</strong></a> Светлане Лукьянчиковой</p><p><a name="5A98"></a>👉🏼<a class="" href="Istoriya-MMM.html"><strong>Речь Сергея Мавроди</strong></a> с трибуны Думы</p><p><a name="Lyip"></a>👉🏼Сергей Мавроди писал <a class="" href="Sergej-Mavrodi-pro-birzhi.html"><strong>про биржи</strong></a> в 2008 году. Очень любопытные мысли</p><p><a name="OfjM"></a>👉🏼<a class="" href="Pervoe-pismo-pravitelstvu-ot-Sergeya-Mavrodi.html"><strong>Первое письмо правительству от Сергея Мавроди</strong>.</a> 16 сентября 2008 года</p><p><a name="vWET"></a>👉🏼<a class="" href="Vtoroe-pismo-pravitelstvu-ot-Sergeya-Mavrodi.html"><strong>Второе письмо правительству от Сергея Мавроди.</strong></a> 30 сентября 2008 года</p><p><a name="Kz2I"></a>👉🏼<a class="" href="Trete-pismo-pravitelstvu-ot-Sergeya-Mavrodi.html"><strong>Третье письмо правительству от Сергея Мавроди.</strong></a> 6 октября 2008 года</p><p><a name="wdxD"></a>👉🏼<a class="" href="Predskazanie-Sergeya-Mavrodi-16.10.2008.html"><strong>"Предсказание"</strong> </a>Сергея Мавроди. 16 октября 2008 года</p><p><a name="bgjr"></a>👉🏼<a class="" href="Predskazanie-2-Sergej-Mavrodi-24.12.2008.html"><strong>"Предсказание-2"</strong> </a>Сергея Мавроди. 24 декабря 2008 года</p><p><a name="Dx8L"></a>👉🏼<a class="" href="Preduprezhdenie-Sergeya-Mavrodi-22.01.2009.html"><strong>Предупреждение </strong></a>Сергей Мавроди, 22 января 2009 года</p><p><a name="03zV"></a>👉🏼<a class="" href="Eshchyo-raz-o-dollare-Sergej-Mavrodi-18.02.2009.html"><strong>Ещё раз о долларе.</strong></a> Сергей Мавроди, 18 февраля 2009 года</p><p><a name="AY4B"></a>👉🏼<a class="" href="Obrashchenie-Sergeya-Mavrodi-k-vlastyam-Rossii.html"><strong>Обращение Сергея Мавроди к властям России,</strong></a> 23 февраля 2009</p><p><a name="4mDc"></a>👉🏼<strong><a class="" href="Dopolnenie-k-obrashcheniyu-k-vlastyam.html">Дополнение к обращению к властям Сергея Мавроди,</a></strong><a class="" href="Dopolnenie-k-obrashcheniyu-k-vlastyam-Sergeya-Mavrodi-26-fevralya-2009-10-21.html"> </a>26 февраля 2009</p><p><a name="9yVe"></a>👉🏼<a class="" href="Stabilizec-Sergej-Mavrodi-17.03.2009.html"><strong>Стабилизец</strong>.</a> Сергей Мавроди, 17 марта 2009 года</p><p><a name="dj0W"></a><a class="" href="Krizis-chast-1.html"><strong>👉🏼 Кризис.</strong></a> Сергей Мавроди, 18 мая 2009 года</p><p><a name="dDEO"></a>👉🏼<a class="" href="Krizis-prodolzhenie-Sergej-Mavrodi-24.06.2009.html"><strong>Кризис, продолжение.</strong></a> Сергей Мавроди, 24 июня 2009 года</p><p><a name="zN3W"></a>👉🏼<a class="" href="I-snova-pro-Krizis-Sergej-Mavrodi-27.06.2009.html"><strong>И снова про кризис.</strong></a> Сергей Мавроди, 27 июня 2009 года</p><p><a name="EmoX"></a>👉🏼<a class="" href="Pro-stavku-refinansirovaniya-i-krepkij-rubl.html"><strong>Про ставку рефинансирования и крепкий рубль.</strong></a> Сергей Мавроди, 21 декабря 2010 года</p><p><a name="qEpq"></a>👉🏼<a class="" href="Mavrodi-pro-nalogi-v-MMM-2011.html"><strong>Мавроди про налоги в МММ-2011</strong></a></p><p><a name="8pcw"></a>👉🏼<a class="" href="TAK-CHTO-ZHE-VSYO-TAKI-DELAT.html"><strong>Так что же всё-таки делать?</strong></a> Если бы Мавроди был на месте властей</p><p><a name="hizr"></a>👉🏼<a class="" href="BOG-I-LYUCIFER--kommentarii-k-Biblii-S-Mavrodi.html"><strong>Бог и Люцифер</strong></a> (комментарии к Библии Сергея Мавроди)</p><p><a name="mMR2"></a>👉🏼<a class="" href="42.html"><strong>"42".</strong></a> Любопытная статейка Сергея Мавроди</p><p><a name="7srw"></a>👉🏼<strong><a href="https://esquire.ru/rules/2481-sergey-mavrodi/">Правила жизни Сергея Мавроди</a>,</strong> журнал Esquire</p><div class="callout" style="border-left-color:#4a6fa5; background:#e8eef7;"><!-- --><p>Регистрация в телеграм-боте: <strong><a href="https://t.me/mavrodi_robot?start=teletype">@Mavrodi_robot</a></strong></p></div><div class="callout" style="border-left-color:#b38b4d; background:#f5f0e6;"><!-- --><p><a class="" href="Main.html"><strong>НА ГЛАВНУЮ</strong></a></p></div></article>
+    </article>
+  </div>
 </body>
 </html>

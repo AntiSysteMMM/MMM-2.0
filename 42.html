@@ -1,47 +1,174 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>"42"</title>
-<style>
-img{max-width:100%;height:auto;display:block;margin:0 auto}
-iframe{display:block;max-width:100%}
-:root{--bg:#fff;--text:#1a1a1a;--muted:#6b7280;--accent:#1a1a1a;--link:#2563eb;--border:#e5e7eb;--code-bg:#f3f4f6}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;font-size:16px;font-weight:400}
-.wrap{max-width:720px;margin:0 auto;padding:40px 20px 80px}
-article{display:block}
-h1{font-size:32px;line-height:1.25;margin-bottom:24px;letter-spacing:-.02em;font-weight:700}
-article p{margin-bottom:16px;font-size:17px}
-article h2{font-size:22px;margin:32px 0 12px;letter-spacing:-.01em;font-weight:700}
-article h3{font-size:19px;margin:24px 0 12px;letter-spacing:-.01em;font-weight:700}
-article a{color:var(--link);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
-article a:hover{border-bottom-color:var(--link)}
-article ul,article ol{margin:0 0 16px 24px}
-article li{margin-bottom:8px;font-size:16px}
-article blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 16px;margin:20px 0;color:#374151;font-style:italic}
-figure{margin:20px 0}
-figure>div{max-width:100%}
-hr{border:none;border-top:1px solid var(--border);margin:28px 0}
-.youtube-embed,.video-embed{position:relative;padding-bottom:56.25%;height:0;margin:20px 0;overflow:hidden}
-.youtube-embed iframe,.video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
-.spacer{display:none}
-.section{margin:16px 0;padding:12px 16px;border-radius:8px;text-align:center}
-@media(max-width:1024px){.wrap{padding:32px 24px 64px}h1{font-size:28px}article p{font-size:16px}}
-@media(max-width:768px){.wrap{padding:24px 16px 48px}h1{font-size:24px;line-height:1.3}h2{font-size:20px}article p{font-size:18px;font-weight:500;line-height:1.6}h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.3}}
-@media(max-width:480px){.wrap{padding:16px 12px 40px}h1{font-size:22px}h2{font-size:18px}article p{font-size:18px}.youtube-embed,.video-embed{margin:16px 0}}
-@media(min-width:1200px){.wrap{max-width:800px;padding:48px 40px 96px}h1{font-size:36px}article p{font-size:18px}}
-@media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}
-@media(prefers-color-scheme:dark){:root{--bg:#1a1a1a;--text:#f5f5f5;--muted:#9ca3af;--accent:#f5f5f5;--border:#374151;--code-bg:#2d2d2d}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>"42"</title>
+  <style>
+:root {
+  --bg: #f9f7f2;
+  --text: #1f1f1f;
+  --text-muted: #4a4640;
+  --accent: #2a4a6f;
+  --border: #d9d4c8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1816;
+    --text: #e8e4d9;
+    --text-muted: #a39a8c;
+    --accent: #8aa4c2;
+    --border: #3a3630;
+  }
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.82;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+article {
+  max-width: 68ch;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.4em;
+}
+
+h2, h3, h4 {
+  font-weight: 700;
+  margin: 1.8em 0 0.6em;
+}
+
+p {
+  margin: 0 0 1.15em;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+a:hover {
+  border-bottom-color: var(--accent);
+}
+
+figure {
+  margin: 1.2em 0;
+  text-align: center;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+}
+figcaption {
+  margin-top: 0.6em;
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 0.4em 0 !important;
+  background: #000;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* === Правила для компактных видео ===
+   Базовый маленький отступ + сильное правило для соседних элементов.
+   Отдельная нейтрализация .wrap (основная причина больших пустот в старых версиях).
+*/
+.video-container {
+  margin: 0.4em 0 !important;
+}
+
+* + .video-container {
+  margin-top: 0.3em !important;
+}
+
+.wrap > .video-container,
+.wrap > img,
+.wrap figure > img {
+  margin: 0.4em 0 !important;
+}
+
+/* Немного подрезаем маржины у типичных соседей видео (заголовки, фигуры) */
+h1, h2, h3, h4, h5, h6,
+p, figure {
+  margin-bottom: 0.5em;
+}
+
+.callout {
+  margin: 1.8em 0;
+  padding: 1.1em 1.3em;
+  border-radius: 6px;
+  border-left: 5px solid var(--accent);
+  background: #f0e9dc;
+}
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* Заголовки внутри callout не должны сильно раздувать рамку */
+.callout h1,
+.callout h2,
+.callout h3,
+.callout h4,
+.callout h5 {
+  margin: 0.2em 0 0.35em;
+  line-height: 1.25;
+  font-size: 1.1em;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin: 2.4em 0;
+}
+
+@media (max-width: 600px) {
+  .wrap { padding: 40px 18px 80px; }
+  body { font-size: 17px; }
+}
+  </style>
 </head>
 <body>
-<div class="wrap">
-<article>
-<h1>"42"</h1>
-<div class="section" style="background-color:hsl(236, 74%, var(--autocolor-background-lightness, 95%));"><p>Регистрация в телеграм-боте: <strong><a href="https://t.me/mavrodi_robot?start=teletype">@Mavrodi_robot</a></strong></p></div><div class="section" style="background-color:hsl(55,  86%, var(--autocolor-background-lightness, 95%));"><p><a href="index.html" class=""><strong>НА ГЛАВНУЮ</strong></a></p></div><figure class="m_column" itemscope="" itemtype="http://schema.org/ImageObject"><img src="41227952-4a3e-4ba0-809a-3ebfaf43ec51.jpeg" class=""></div><figcaption itemprop="description">Живая структурированная сеть, основанная на доверии и взаимопомощи; абсолютно децентрализованная автоматизированная система, в которой телеграм-бот стыкует участников напрямую друг с другом; отсутствие единых баз данных, серверов и центров управления. Тотальная распылённость!</figcaption></figure><hr><p><em>Итак. Я уже неоднократно указывал, что если пытаться подсчитывать минимальный срок жизни Системы, то получается примерно 42 месяца.</em></p><p><em>6 месяцев просуществовало МММ, 12 месяцев — SG. Усредняем, получается (12+6):2=9 месяцев. (Время вынашивания женщиной плода, ребёнка. Символично, в некотором роде.) Но, так как там темпы роста были 100% в месяц — в 5 раз выше, — то и здесь, соответственно, время жизни системы тоже должно быть больше в те же самые 5 раз. 9*5=45 месяцев. а с учётом инвалидов-пенсионеров, у которых не 20%, а 30% — чуть меньше. То есть именно те самые 42 месяца практически точно и получается. Тютелька в тютельку почти! </em></p><p><em>Открываем теперь Апокалипсис: <…и даны были ему уста, говорящие гордо и богохульно, и дана ему власть действовать — сорок два месяца>. Далее: <… и он сделает то, что всем, малым и великим, богатым и бедным… нельзя будет ни покупать, ни продавать, кроме тех, кто имеет имя зверя, или число имени его>. Ничего не напоминает? Мавро, к примеру?</em></p><p><em>Кстати, насчёт МММ. между прочим, ведь четырнадцатая буква в алфавите. А значит, МММ — это 14*3=42. Забавно, правда?</em></p><p><em>И далее: <Они [язычники] будут попирать святой город сорок два месяца>. Апокалипсис 11:2.</em></p><p><em>Но не бойтесь! Не всё так мрачно.</em></p><p><em>Во-первых <Иисус, начиная Своё служение, был лет тридцати> Лука 3:23. А распят Он был, как известно, в возрасте 33-лет. То есть проповедовал Он примерно три с половиной года. (Это, собственно, подтверждается и пророчеством Даниила. Там прямо говорится про три с половиной года! Не приблизительно даже!) а три с половиной года это как раз всё те же 42 месяца!</em></p><p><em>Далее.</em></p><p><em><И явилось на небе великое знамение: жена, облеченная в солнце; под ногами её луна, и на небе её венец из двенадцати звезд… И родила она младенца мужеского пола, которому надлежит пасти все народы жезлом железным; и восхищенно было дитя её к Богу и престолу Его. А жена убежала [от Дракона] в пустыню, где приготовлено было для нее место от Бога, чтобы пытали её там тысячу двести шестьдесят дней>.(Апокалипсис 12:1, 5-6)</em></p><p><em>Пророки Апокалипсиса, <суть две маслины и два светильника, стоящие перед Богом земли>, пророчествовали тоже ровно тысячу двести шестьдесят дней (Апокалипсис 11:2).</em></p><p><em>А 1260 дней — это ведь ровно 42 месяца! ни больше и не меньше.</em></p><p><em>И наконец.</em></p><p><em><Всех родов от Авраама до Давид четырнадцать родов; и от Давида до переселения в Вавилон до Христа четырнадцать родов; и от переселения в Вавилон до Христа четырнадцать родов>. Матфей 1:17. Родословная Христа.</em></p><p><em>То есть опять же три раза по четырнадцать — МММ, всё те же 14*3=42. Никуда от них не дется. И что же это такое? 42 — добро или зло? — пока неясно. Будущее покажет! Ничего ещё не решено!</em></p><p><em><Я ни к чему не буду тебя принуждать и ничего не буду тебе навязывать. Ты сам сделаешь свой выбор, и он будет свободным>. Мой роман, “Сын Люцифера” — Диалог Люцифера с Сыном. И знаете, между прочим, как переводится с латинского Люцифер? Lucifer — <несущий свет>.</em></p><p><em>И в заключении. Число Зверя. 666, три шестёрки знаменитые. Что это за число за такое ? И вот. я подумал: в Библии всё, что касается, добра — в днях, а зла — в месяцах. Так не возраст ли это Зверя, в месяцах?</em></p><figure class="m_column" itemscope="" itemtype="http://schema.org/ImageObject"><img src="91d6d3e2-7d89-4455-bf8b-b4d2839832bd.png" class=""></div><figcaption itemprop="description">число зверя</figcaption></figure><p><em>Ну-ка, ну-ка! Сколько это будет в годах-то? 666:12=55,5. Тоже интересное число. Три пятерки! Я, кстати, в 55-м году родился. Пятьдесят пять с половиной лет мне исполняется… когда же?.. А! 11 февраля 2011!</em></p><p><em>11.02.2011. Абсолютно симметричное число. Два всего таких в тысячелетии. Второе — 22.02.2022. Ровно через 11 лет и 11 дней после первого, кстати. Любопытно, да? Но этого мало. Какой день в году 11 февраля, как вы думаете? Правильно! И как вы только догадались? Именно 42-й. Вот-так.</em></p><p><em>Сергей Мавроди</em></p><hr><div class="section" style="background-color:hsl(236, 74%, var(--autocolor-background-lightness, 95%));"><p>Регистрация в телеграм-боте: <strong><a href="https://t.me/mavrodi_robot?start=teletype">@Mavrodi_robot</a></strong></p></div><div class="section" style="background-color:hsl(55,  86%, var(--autocolor-background-lightness, 95%));"><p><a href="index.html" class=""><strong>НА ГЛАВНУЮ</strong></a></p></div>
-</article>
-</div>
+  <div class="wrap">
+    <article>
+      <h1>"42"</h1>
+      <article class="article__content text" itemprop="articleBody"><!--[--><div class="callout" style="border-left-color:#4a6fa5; background:#e8eef7;"><!-- --><!--[--><!--]--><!--[--><p><!--[--><!--]--><!--[-->Регистрация в телеграм-боте: <strong><a href="https://t.me/mavrodi_robot?start=teletype"><!--[-->@Mavrodi_robot<!--]--></a></strong><!--]--></p><!--]--></div><div class="callout" style="border-left-color:#b38b4d; background:#f5f0e6;"><!-- --><!--[--><!--]--><!--[--><p><!--[--><!--]--><!--[--><a class="" href="Main.html"><!--[--><strong>НА ГЛАВНУЮ</strong><!--]--></a><!--]--></p><!--]--></div><figure class="m_column" itemscope="" itemtype="http://schema.org/ImageObject"><a name="M0h9"></a><!--[--><!--]--><!-- --><!--[--><img class="" id="M0h9" src="41227952-4a3e-4ba0-809a-3ebfaf43ec51.jpeg"/><!--]--><!-- --><!--[--><!--[--><figcaption itemprop="description"><!-- --><!--[--><!--]--><!--[-->Живая структурированная сеть, основанная на доверии и взаимопомощи; абсолютно децентрализованная автоматизированная система, в которой телеграм-бот стыкует участников напрямую друг с другом; отсутствие единых баз данных, серверов и центров управления. Тотальная распылённость!<!--]--></figcaption><!--]--><!--]--></figure><hr/><p><a name="IyeF"></a><!--[--><!--]--><!--[--><em>Итак. Я уже неоднократно указывал, что если пытаться подсчитывать минимальный срок жизни Системы, то получается примерно 42 месяца.</em><!--]--></p><p><a name="wJKj"></a><!--[--><!--]--><!--[--><em>6 месяцев просуществовало МММ, 12 месяцев — SG. Усредняем, получается (12+6):2=9 месяцев. (Время вынашивания женщиной плода, ребёнка. Символично, в некотором роде.) Но, так как там темпы роста были 100% в месяц — в 5 раз выше, — то и здесь, соответственно, время жизни системы тоже должно быть больше в те же самые 5 раз. 9*5=45 месяцев. а с учётом инвалидов-пенсионеров, у которых не 20%, а 30% — чуть меньше. То есть именно те самые 42 месяца практически точно и получается. Тютелька в тютельку почти! </em><!--]--></p><p><a name="zV70"></a><!--[--><!--]--><!--[--><em>Открываем теперь Апокалипсис: &lt;…и даны были ему уста, говорящие гордо и богохульно, и дана ему власть действовать — сорок два месяца&gt;. Далее: &lt;… и он сделает то, что всем, малым и великим, богатым и бедным… нельзя будет ни покупать, ни продавать, кроме тех, кто имеет имя зверя, или число имени его&gt;. Ничего не напоминает? Мавро, к примеру?</em><!--]--></p><p><a name="gHfy"></a><!--[--><!--]--><!--[--><em>Кстати, насчёт МММ. между прочим, ведь четырнадцатая буква в алфавите. А значит, МММ — это 14*3=42. Забавно, правда?</em><!--]--></p><p><a name="sNuu"></a><!--[--><!--]--><!--[--><em>И далее: &lt;Они [язычники] будут попирать святой город сорок два месяца&gt;. Апокалипсис 11:2.</em><!--]--></p><p><a name="UCWj"></a><!--[--><!--]--><!--[--><em>Но не бойтесь! Не всё так мрачно.</em><!--]--></p><p><a name="ya4N"></a><!--[--><!--]--><!--[--><em>Во-первых &lt;Иисус, начиная Своё служение, был лет тридцати&gt; Лука 3:23. А распят Он был, как известно, в возрасте 33-лет. То есть проповедовал Он примерно три с половиной года. (Это, собственно, подтверждается и пророчеством Даниила. Там прямо говорится про три с половиной года! Не приблизительно даже!) а три с половиной года это как раз всё те же 42 месяца!</em><!--]--></p><p><a name="lznn"></a><!--[--><!--]--><!--[--><em>Далее.</em><!--]--></p><p><a name="iJqG"></a><!--[--><!--]--><!--[--><em>&lt;И явилось на небе великое знамение: жена, облеченная в солнце; под ногами её луна, и на небе её венец из двенадцати звезд… И родила она младенца мужеского пола, которому надлежит пасти все народы жезлом железным; и восхищенно было дитя её к Богу и престолу Его. А жена убежала [от Дракона] в пустыню, где приготовлено было для нее место от Бога, чтобы пытали её там тысячу двести шестьдесят дней&gt;.(Апокалипсис 12:1, 5-6)</em><!--]--></p><p><a name="HSMT"></a><!--[--><!--]--><!--[--><em>Пророки Апокалипсиса, &lt;суть две маслины и два светильника, стоящие перед Богом земли&gt;, пророчествовали тоже ровно тысячу двести шестьдесят дней (Апокалипсис 11:2).</em><!--]--></p><p><a name="MIKQ"></a><!--[--><!--]--><!--[--><em>А 1260 дней — это ведь ровно 42 месяца! ни больше и не меньше.</em><!--]--></p><p><a name="nIw7"></a><!--[--><!--]--><!--[--><em>И наконец.</em><!--]--></p><p><a name="B0WP"></a><!--[--><!--]--><!--[--><em>&lt;Всех родов от Авраама до Давид четырнадцать родов; и от Давида до переселения в Вавилон до Христа четырнадцать родов; и от переселения в Вавилон до Христа четырнадцать родов&gt;. Матфей 1:17. Родословная Христа.</em><!--]--></p><p><a name="0r69"></a><!--[--><!--]--><!--[--><em>То есть опять же три раза по четырнадцать — МММ, всё те же 14*3=42. Никуда от них не дется. И что же это такое? 42 — добро или зло? — пока неясно. Будущее покажет! Ничего ещё не решено!</em><!--]--></p><p><a name="kf6s"></a><!--[--><!--]--><!--[--><em>&lt;Я ни к чему не буду тебя принуждать и ничего не буду тебе навязывать. Ты сам сделаешь свой выбор, и он будет свободным&gt;. Мой роман, “Сын Люцифера” — Диалог Люцифера с Сыном. И знаете, между прочим, как переводится с латинского Люцифер? Lucifer — &lt;несущий свет&gt;.</em><!--]--></p><p><a name="fWnc"></a><!--[--><!--]--><!--[--><em>И в заключении. Число Зверя. 666, три шестёрки знаменитые. Что это за число за такое ? И вот. я подумал: в Библии всё, что касается, добра — в днях, а зла — в месяцах. Так не возраст ли это Зверя, в месяцах?</em><!--]--></p><figure class="m_column" itemscope="" itemtype="http://schema.org/ImageObject"><a name="FN0k"></a><!--[--><!--]--><!-- --><!--[--><img class="" id="FN0k" src="91d6d3e2-7d89-4455-bf8b-b4d2839832bd.png"/><!--]--><!-- --><!--[--><!--[--><figcaption itemprop="description"><!-- --><!--[--><!--]--><!--[-->число зверя<!--]--></figcaption><!--]--><!--]--></figure><p><a name="J8C5"></a><!--[--><!--]--><!--[--><em>Ну-ка, ну-ка! Сколько это будет в годах-то? 666:12=55,5. Тоже интересное число. Три пятерки! Я, кстати, в 55-м году родился. Пятьдесят пять с половиной лет мне исполняется… когда же?.. А! 11 февраля 2011!</em><!--]--></p><p><a name="erN2"></a><!--[--><!--]--><!--[--><em>11.02.2011. Абсолютно симметричное число. Два всего таких в тысячелетии. Второе — 22.02.2022. Ровно через 11 лет и 11 дней после первого, кстати. Любопытно, да? Но этого мало. Какой день в году 11 февраля, как вы думаете? Правильно! И как вы только догадались? Именно 42-й. Вот-так.</em><!--]--></p><p><a name="BgaJ"></a><!--[--><!--]--><!--[--><em>Сергей Мавроди</em><!--]--></p><hr/><div class="callout" style="border-left-color:#4a6fa5; background:#e8eef7;"><!-- --><!--[--><!--]--><!--[--><p><!--[--><!--]--><!--[-->Регистрация в телеграм-боте: <strong><a href="https://t.me/mavrodi_robot?start=teletype"><!--[-->@Mavrodi_robot<!--]--></a></strong><!--]--></p><!--]--></div><div class="callout" style="border-left-color:#b38b4d; background:#f5f0e6;"><!-- --><!--[--><!--]--><!--[--><p><!--[--><!--]--><!--[--><a class="" href="Main.html"><!--[--><strong>НА ГЛАВНУЮ</strong><!--]--></a><!--]--></p><!--]--></div><!--]--></article>
+    </article>
+  </div>
 </body>
 </html>

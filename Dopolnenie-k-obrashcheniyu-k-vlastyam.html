@@ -1,47 +1,174 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Дополнение к обращению к властям Сергея Мавроди, 26 февраля 2009</title>
-<style>
-img{max-width:100%;height:auto;display:block;margin:0 auto}
-iframe{display:block;max-width:100%}
-:root{--bg:#fff;--text:#1a1a1a;--muted:#6b7280;--accent:#1a1a1a;--link:#2563eb;--border:#e5e7eb;--code-bg:#f3f4f6}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;font-size:16px;font-weight:400}
-.wrap{max-width:720px;margin:0 auto;padding:40px 20px 80px}
-article{display:block}
-h1{font-size:32px;line-height:1.25;margin-bottom:24px;letter-spacing:-.02em;font-weight:700}
-article p{margin-bottom:16px;font-size:17px}
-article h2{font-size:22px;margin:32px 0 12px;letter-spacing:-.01em;font-weight:700}
-article h3{font-size:19px;margin:24px 0 12px;letter-spacing:-.01em;font-weight:700}
-article a{color:var(--link);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
-article a:hover{border-bottom-color:var(--link)}
-article ul,article ol{margin:0 0 16px 24px}
-article li{margin-bottom:8px;font-size:16px}
-article blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 16px;margin:20px 0;color:#374151;font-style:italic}
-figure{margin:20px 0}
-figure>div{max-width:100%}
-hr{border:none;border-top:1px solid var(--border);margin:28px 0}
-.youtube-embed,.video-embed{position:relative;padding-bottom:56.25%;height:0;margin:20px 0;overflow:hidden}
-.youtube-embed iframe,.video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
-.spacer{display:none}
-.section{margin:16px 0;padding:12px 16px;border-radius:8px;text-align:center}
-@media(max-width:1024px){.wrap{padding:32px 24px 64px}h1{font-size:28px}article p{font-size:16px}}
-@media(max-width:768px){.wrap{padding:24px 16px 48px}h1{font-size:24px;line-height:1.3}h2{font-size:20px}article p{font-size:18px;font-weight:500;line-height:1.6}h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.3}}
-@media(max-width:480px){.wrap{padding:16px 12px 40px}h1{font-size:22px}h2{font-size:18px}article p{font-size:18px}.youtube-embed,.video-embed{margin:16px 0}}
-@media(min-width:1200px){.wrap{max-width:800px;padding:48px 40px 96px}h1{font-size:36px}article p{font-size:18px}}
-@media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}
-@media(prefers-color-scheme:dark){:root{--bg:#1a1a1a;--text:#f5f5f5;--muted:#9ca3af;--accent:#f5f5f5;--border:#374151;--code-bg:#2d2d2d}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дополнение к обращению к властям Сергея Мавроди, 26 февраля 2009</title>
+  <style>
+:root {
+  --bg: #f9f7f2;
+  --text: #1f1f1f;
+  --text-muted: #4a4640;
+  --accent: #2a4a6f;
+  --border: #d9d4c8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1816;
+    --text: #e8e4d9;
+    --text-muted: #a39a8c;
+    --accent: #8aa4c2;
+    --border: #3a3630;
+  }
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.82;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+article {
+  max-width: 68ch;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.4em;
+}
+
+h2, h3, h4 {
+  font-weight: 700;
+  margin: 1.8em 0 0.6em;
+}
+
+p {
+  margin: 0 0 1.15em;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+a:hover {
+  border-bottom-color: var(--accent);
+}
+
+figure {
+  margin: 1.2em 0;
+  text-align: center;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+}
+figcaption {
+  margin-top: 0.6em;
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 0.4em 0 !important;
+  background: #000;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* === Правила для компактных видео ===
+   Базовый маленький отступ + сильное правило для соседних элементов.
+   Отдельная нейтрализация .wrap (основная причина больших пустот в старых версиях).
+*/
+.video-container {
+  margin: 0.4em 0 !important;
+}
+
+* + .video-container {
+  margin-top: 0.3em !important;
+}
+
+.wrap > .video-container,
+.wrap > img,
+.wrap figure > img {
+  margin: 0.4em 0 !important;
+}
+
+/* Немного подрезаем маржины у типичных соседей видео (заголовки, фигуры) */
+h1, h2, h3, h4, h5, h6,
+p, figure {
+  margin-bottom: 0.5em;
+}
+
+.callout {
+  margin: 1.8em 0;
+  padding: 1.1em 1.3em;
+  border-radius: 6px;
+  border-left: 5px solid var(--accent);
+  background: #f0e9dc;
+}
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* Заголовки внутри callout не должны сильно раздувать рамку */
+.callout h1,
+.callout h2,
+.callout h3,
+.callout h4,
+.callout h5 {
+  margin: 0.2em 0 0.35em;
+  line-height: 1.25;
+  font-size: 1.1em;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin: 2.4em 0;
+}
+
+@media (max-width: 600px) {
+  .wrap { padding: 40px 18px 80px; }
+  body { font-size: 17px; }
+}
+  </style>
 </head>
 <body>
-<div class="wrap">
-<article>
-<h1>Дополнение к обращению к властям Сергея Мавроди, 26 февраля 2009</h1>
-<div class="section" style="background-color:hsl(236, 74%, var(--autocolor-background-lightness, 95%));"><p>Регистрация в телеграм-боте: <strong><a href="https://t.me/mavrodi_robot?start=teletype">@Mavrodi_robot</a></strong></p></div><div class="section" style="background-color:hsl(55,  86%, var(--autocolor-background-lightness, 95%));"><p><a href="index.html" class=""><strong>НА ГЛАВНУЮ</strong></a></p></div><figure class="m_column" itemscope="" itemtype="http://schema.org/ImageObject"><img src="41227952-4a3e-4ba0-809a-3ebfaf43ec51.jpeg" class=""></div><figcaption itemprop="description">Живая структурированная сеть, основанная на доверии и взаимопомощи; абсолютно децентрализованная автоматизированная система, в которой телеграм-бот стыкует участников напрямую друг с другом; отсутствие единых баз данных, серверов и центров управления. Тотальная распылённость!</figcaption></figure><hr><h4>Дополнение к <a href="Obrashchenie-Sergeya-Mavrodi-k-vlastyam-Rossii.html" class="">этому обращению</a></h4><hr><p><em>Экономической катастрофы Россия, скорее всего, вообще не переживёт. А перестанет существовать как единое государство. Собственно, удивительно, как это до сих пор ещё не произошло. Дальний Восток, Кавказ, Татарстан, Якутия… Да все почти разбегутся. Кто захочет остаться с нынешними властями и смотреть съезды «Единой России» да читать про новые яхты и дворцы разных там дерипасок-абрамовичей? И объяснения всякие слушать, почему именно у нас всё так плохо. В то время как в соседних, отделившихся областях какая-то жизнь начнётся, что-то реальное происходить станет! Свежий ветер перемен подует!</em></p><p><em>И что власти, собственно, могут противопоставить этому центробежному процессу? Да ничего. Армии почитай что нет. Да и не будет она в народ стрелять. Внутренние органы, спецназы всякие? События во Владивостоке ясно продемонстрировали их позицию. Не зря же пришлось подмосковный спецназ для разгона демонстраций вызывать.</em></p><p><em>Ещё раз призываю прислушаться к моему предложению. Последний шанс. Сказочный, по сути. Немыслимый! Когда, казалось бы, уже всё кончено. А что сами вы ничего не сможете сделать, по-моему, уже очевидно всем. Абсолютно!</em></p><p><em>Сергей Мавроди, 26 февраля 2009 года</em></p><hr><div class="section" style="background-color:hsl(236, 74%, var(--autocolor-background-lightness, 95%));"><p>Регистрация в телеграм-боте: <strong><a href="https://t.me/mavrodi_robot?start=teletype">@Mavrodi_robot</a></strong></p></div><div class="section" style="background-color:hsl(55,  86%, var(--autocolor-background-lightness, 95%));"><p><a href="index.html" class=""><strong>НА ГЛАВНУЮ</strong></a></p></div>
-</article>
-</div>
+  <div class="wrap">
+    <article>
+      <h1>Дополнение к обращению к властям Сергея Мавроди, 26 февраля 2009</h1>
+      <article class="article__content text" itemprop="articleBody"><!--[--><div class="callout" style="border-left-color:#4a6fa5; background:#e8eef7;"><!-- --><!--[--><!--]--><!--[--><p><!--[--><!--]--><!--[-->Регистрация в телеграм-боте: <strong><a href="https://t.me/mavrodi_robot?start=teletype"><!--[-->@Mavrodi_robot<!--]--></a></strong><!--]--></p><!--]--></div><div class="callout" style="border-left-color:#b38b4d; background:#f5f0e6;"><!-- --><!--[--><!--]--><!--[--><p><!--[--><!--]--><!--[--><a class="" href="Main.html"><!--[--><strong>НА ГЛАВНУЮ</strong><!--]--></a><!--]--></p><!--]--></div><figure class="m_column" itemscope="" itemtype="http://schema.org/ImageObject"><a name="pnQh"></a><!--[--><!--]--><!-- --><!--[--><img class="" id="pnQh" src="41227952-4a3e-4ba0-809a-3ebfaf43ec51.jpeg"/><!--]--><!-- --><!--[--><!--[--><figcaption itemprop="description"><!-- --><!--[--><!--]--><!--[-->Живая структурированная сеть, основанная на доверии и взаимопомощи; абсолютно децентрализованная автоматизированная система, в которой телеграм-бот стыкует участников напрямую друг с другом; отсутствие единых баз данных, серверов и центров управления. Тотальная распылённость!<!--]--></figcaption><!--]--><!--]--></figure><hr/><h4><a name="Дополнение-к-этому-обращению"></a><!--[--><!--]--><!--[-->Дополнение к <a class="" href="Obrashchenie-Sergeya-Mavrodi-k-vlastyam-Rossii.html"><!--[-->этому обращению<!--]--></a><!--]--></h4><hr/><p><a name="kDNi"></a><!--[--><!--]--><!--[--><em>Экономической катастрофы Россия, скорее всего, вообще не переживёт. А перестанет существовать как единое государство. Собственно, удивительно, как это до сих пор ещё не произошло. Дальний Восток, Кавказ, Татарстан, Якутия… Да все почти разбегутся. Кто захочет остаться с нынешними властями и смотреть съезды «Единой России» да читать про новые яхты и дворцы разных там дерипасок-абрамовичей? И объяснения всякие слушать, почему именно у нас всё так плохо. В то время как в соседних, отделившихся областях какая-то жизнь начнётся, что-то реальное происходить станет! Свежий ветер перемен подует!</em><!--]--></p><p><a name="8NkM"></a><!--[--><!--]--><!--[--><em>И что власти, собственно, могут противопоставить этому центробежному процессу? Да ничего. Армии почитай что нет. Да и не будет она в народ стрелять. Внутренние органы, спецназы всякие? События во Владивостоке ясно продемонстрировали их позицию. Не зря же пришлось подмосковный спецназ для разгона демонстраций вызывать.</em><!--]--></p><p><a name="rImR"></a><!--[--><!--]--><!--[--><em>Ещё раз призываю прислушаться к моему предложению. Последний шанс. Сказочный, по сути. Немыслимый! Когда, казалось бы, уже всё кончено. А что сами вы ничего не сможете сделать, по-моему, уже очевидно всем. Абсолютно!</em><!--]--></p><p><a name="GDyK"></a><!--[--><!--]--><!--[--><em>Сергей Мавроди, 26 февраля 2009 года</em><!--]--></p><hr/><div class="callout" style="border-left-color:#4a6fa5; background:#e8eef7;"><!-- --><!--[--><!--]--><!--[--><p><!--[--><!--]--><!--[-->Регистрация в телеграм-боте: <strong><a href="https://t.me/mavrodi_robot?start=teletype"><!--[-->@Mavrodi_robot<!--]--></a></strong><!--]--></p><!--]--></div><div class="callout" style="border-left-color:#b38b4d; background:#f5f0e6;"><!-- --><!--[--><!--]--><!--[--><p><!--[--><!--]--><!--[--><a class="" href="Main.html"><!--[--><strong>НА ГЛАВНУЮ</strong><!--]--></a><!--]--></p><!--]--></div><!--]--></article>
+    </article>
+  </div>
 </body>
 </html>
